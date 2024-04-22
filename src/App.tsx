@@ -7,6 +7,8 @@ import { Home } from './components/HomePage/HomePage';
 import { Navbar } from './components/Navbar/Navbar';
 import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { Character } from './components/Character/Character';
+import { EpisodeList } from './components/EpisodeList/EpisodeList';
+import { LocationList } from './components/LocationList/LocationList';
 
 function App() {
 
@@ -26,13 +28,17 @@ function App() {
         element: <CharList />
       },
       {
-        path: 'character/:id', // Dynamic route parameter for character ID
+        path: 'character/:id',
         element: <Character />
       },
-      /* {
+      {
         path: 'episodes',
-        element: <Episodes />
-      } */
+        element: <EpisodeList />
+      },
+      {
+        path: 'locations',
+        element: <LocationList />
+      }
     ]
     },
   ])

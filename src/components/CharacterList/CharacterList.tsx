@@ -16,18 +16,19 @@ export const CharList = () => {
         <>
             <header>
                 <div className="hero">
-                    <div className="hero-content text-center">
+                    <div className="hero-content text-center flex-col">
                         <div className="max-w-md">
                             <h1 className="text-5xl font-bold">Character List</h1>
+                        </div>
+                        <div className="join">
+                            <button className="join-item btn" onClick={() => setPage(page - 1)}>«</button>
+                            <button className="join-item btn">Page {page}</button>
+                            <button className="join-item btn" onClick={() => setPage(page + 1)}>»</button>
                         </div>
                     </div>
                 </div>
             </header>
-            <div className="join">
-               <button className="join-item btn" onClick={() => setPage(page - 1)}>«</button>
-               <button className="join-item btn">Page {page}</button>
-               <button className="join-item btn" onClick={() => setPage(page + 1)}>»</button>
-           </div>
+            
             <div>
                 <div className="flex flex-wrap mx-4">
                 {charData && charData.map(({id, name, status, gender, image}) => (
@@ -39,8 +40,6 @@ export const CharList = () => {
                                 </figure>
                                 <div className="card-body items-center text-center">
                                 <h2 className="card-title">{name}</h2>
-                                <p>{gender}</p>
-                                <p>{status}</p>
                                 </div>
                             </div>
                         </Link>
@@ -51,8 +50,3 @@ export const CharList = () => {
         </>
     );
 }
-
-
-/* {charData && charData.map(({id, name, status, gender}) => (
-    <li key={id}>{id}: {name}<br />{status}<br />{gender}</li>
-))}  */ 

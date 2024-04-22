@@ -19,7 +19,7 @@ export type CharacterModel = {
   created: string;
 };
 
-type Info = {
+export type Info = {
   count: number;
   pages: number;
   next: string | null;
@@ -30,3 +30,5 @@ export type ApiResponse = {
   info: Info,
   results: CharacterModel[]
 }
+
+

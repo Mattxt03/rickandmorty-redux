@@ -7,6 +7,8 @@ export const Navbar = () => {
     const {pathname} = useLocation();
     const links = [
         {root: 'characters', name: 'Characters'},
+        {root: 'locations', name: 'Locations'},
+        {root: 'episodes', name: 'Episodes'},
       ]
 
     return (

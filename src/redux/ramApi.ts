@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { ApiResponse } from "../components/CharacterType/Character"
+import { ApiResponse, CharacterModel } from "../components/models/Character"
 
 export const rickAndMortyApi = createApi({
     baseQuery: fetchBaseQuery({
@@ -9,18 +9,16 @@ export const rickAndMortyApi = createApi({
     tagTypes: ["Character"],
     endpoints: (build) => ({
       getCharacters: build.query<ApiResponse, number>({
-        query: (page: number) => ({
-          url: '/character',
-          params: {
-            page: page
-          }
-        }),
+        query: (page = 1) => `character?page=${page}`
+      }),
+      getCharactersById: build.query<CharacterModel, number>({
+        query: (id: number) => `character/${id}`
       }),
       
     }),
   });
   
-  export const { useGetCharactersQuery } = rickAndMortyApi;
+  export const { useGetCharactersQuery, useGetCharactersByIdQuery } = rickAndMortyApi;
   
   
   

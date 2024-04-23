@@ -5,5 +5,12 @@ module.exports = {
   daisyui: {
     themes: ["light", "dark"],
   },
+  theme: {
+    extend: {
+      fontFamily: {
+        'sans': ['Bangers', 'sans-serif'],
+      }
+    }
+  }
 }
 

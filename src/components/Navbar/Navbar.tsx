@@ -16,12 +16,12 @@ export const Navbar = () => {
         <>
             <div className="navbar bg-base-100">
                 <div className="navbar-start">
-                    <Link to="/" className="btn btn-ghost text-xl"> Home </Link>
+                    <Link to="/" className="btn btn-ghost text-4xl"> Home </Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
                     {links.map(({root, name}, index) => 
-                        <li key={index}><Link to={root} className={pathname === root ? "selected" : ""}> {name} </Link></li>
+                        <li key={index}><Link to={root} className={` text-2xl ${pathname === root ? "selected" : ""}`}> {name} </Link></li>
                     )}
                     </ul>
                 </div>

@@ -33,9 +33,9 @@ export const CharList = () => {
                             <h1 className="text-5xl font-bold">Character List</h1>
                         </div>
                         <div className="join border-neutral border-2">
-                            <button className="join-item btn" onClick={() => setPage(page - 1)} disabled={page === 1}>«</button>
-                            <button className="join-item btn">Page {page}</button>
-                            <button className="join-item btn" onClick={() => setPage(page + 1)} disabled={page === data.info.pages}>»</button>
+                            <button className="join-item btn text-2xl font-normal" onClick={() => setPage(page - 1)} disabled={page === 1}>«</button>
+                            <button className="join-item btn text-2xl font-normal">Page {page}</button>
+                            <button className="join-item btn text-2xl font-normal" onClick={() => setPage(page + 1)} disabled={page === data.info.pages}>»</button>
                         </div>
                     </div>
                 </div>
@@ -52,10 +52,10 @@ export const CharList = () => {
                                 </figure>
                                 </Link>
                                 <div className="card-body items-center text-center">
-                                <h2 className="card-title">{name}</h2>
-                                <button onClick={() => handleAddCharToFav({ id, name, status, gender, image })}>
-                                    Add to Favorites
-                                </button>
+                                <h2 className="card-title font-normal text-3xl">{name}</h2>
+                                <div className="card-actions ">
+                                    <button onClick={() => handleAddCharToFav({ id, name, status, gender, image })} className="btn btn-accent font-normal">Add to Favorites</button>
+                                </div>
                                 </div>
                             </div>
                     </div>

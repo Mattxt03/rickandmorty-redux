@@ -10,7 +10,7 @@ export const Character = () => {
 
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>Error</div>;
-  if (!charData) return <div>No data available for this character</div>;
+  if (!charData) return <div>No character data</div>;
 
   return (
     <div className="card w-96 bg-base-100 mx-auto border-2 border-gray-300 shadow-xl">
@@ -18,9 +18,12 @@ export const Character = () => {
             <img src={charData.image} alt={charData.name} />
         </figure>
         <div className="card-body">
-            <h2 className="card-title">{charData.name}</h2>
-            <p>Status: {charData.status}</p>
-            <p>Species: {charData.species}</p>
+            <h2 className="card-title text-3xl">{charData.name}</h2>
+            <p className="text-2xl text-gray-500"> Current Status: </p>
+            <p className={`text-3xl ${charData.status === 'Alive' ? 'text-green-500' : charData.status === 'Dead' ? 'text-red-500' : 'text-orange-500'}`}>{charData.status}</p>
+
+            <p className="text-2xl text-gray-500"> Gender: </p>
+            <p className="text-3xl">{charData.gender}</p>
         </div>
     </div>
   );

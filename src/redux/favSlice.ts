@@ -8,10 +8,12 @@ export const favSlice = createSlice({
   },
   reducers: {
     addFavoriteCharacter(state, action: { payload: FavChar }) {
-      state.characters.push(action.payload);
+        if(!state.characters.some(character => character.id === action.payload.id)) {
+            state.characters.push(action.payload);
+        }
     },
     removeFavoriteChar(state, action: {payload: number}) {
-        state.characters = state.characters.filter((character => character.id !== action.payload))
+        state.characters = state.characters.filter(character => character.id !== action.payload)
     }
   },
 });

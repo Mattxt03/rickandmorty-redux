@@ -17,7 +17,7 @@ export const EpisodeList = () => {
             <div className="hero">
                 <div className="hero-content text-center flex-col">
                     <div className="max-w-md">
-                        <h1 className="text-5xl font-bold">Episode List</h1>
+                        <h1 className="text-5xl">Episode List</h1>
                     </div>
                     <div className="join border-neutral border-2">
                         <button className="join-item btn" onClick={() => setPage(page - 1)} disabled={page === 1}>«</button>

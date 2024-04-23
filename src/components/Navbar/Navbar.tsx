@@ -9,6 +9,7 @@ export const Navbar = () => {
         {root: 'characters', name: 'Characters'},
         {root: 'locations', name: 'Locations'},
         {root: 'episodes', name: 'Episodes'},
+        {root: 'favorites', name: 'FavCharacters'},
       ]
 
     return (
@@ -20,8 +21,8 @@ export const Navbar = () => {
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
                     {links.map(({root, name}, index) => 
-                            <li key={index}><Link to={root} className={pathname === root ? "selected" : ""}> {name} </Link></li>
-                        )}
+                        <li key={index}><Link to={root} className={pathname === root ? "selected" : ""}> {name} </Link></li>
+                    )}
                     </ul>
                 </div>
                 <div className="navbar-end">

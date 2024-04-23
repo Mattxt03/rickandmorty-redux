@@ -18,10 +18,10 @@ export const LocationList = () => {
                     <div className="max-w-md">
                         <h1 className="text-5xl font-bold">Episode List</h1>
                     </div>
-                    <div className="join">
-                        <button className="join-item btn" onClick={() => setPage(page - 1)}>«</button>
+                    <div className="join border-neutral border-2">
+                        <button className="join-item btn" onClick={() => setPage(page - 1)} disabled={page === 1}>«</button>
                         <button className="join-item btn">Page {page}</button>
-                        <button className="join-item btn" onClick={() => setPage(page + 1)}>»</button>
+                        <button className="join-item btn" onClick={() => setPage(page + 1)} disabled={page === data.info.pages}>»</button>
                     </div>
                 </div>
             </div>

@@ -21,9 +21,6 @@ export const Character = () => {
             <h2 className="card-title">{charData.name}</h2>
             <p>Status: {charData.status}</p>
             <p>Species: {charData.species}</p>
-            <div className="card-actions justify-end">
-                <button className="btn btn-primary">Buy Now</button>
-            </div>
         </div>
     </div>
   );

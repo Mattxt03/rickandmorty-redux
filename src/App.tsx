@@ -1,4 +1,3 @@
-import React, { useEffect } from 'react';
 import './App.css';
 import { Provider } from 'react-redux';
 import { store } from './redux/store';
@@ -9,6 +8,7 @@ import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { Character } from './components/Character/Character';
 import { EpisodeList } from './components/EpisodeList/EpisodeList';
 import { LocationList } from './components/LocationList/LocationList';
+import { FavoriteCharacters } from './components/FavCharacters/FavoriteCharacters';
 
 function App() {
 
@@ -38,7 +38,11 @@ function App() {
       {
         path: 'locations',
         element: <LocationList />
-      }
+      },
+      {
+        path: 'favorites',
+        element: <FavoriteCharacters />
+      },
     ]
     },
   ])

@@ -19,6 +19,14 @@ export type CharacterModel = {
   created: string;
 };
 
+export type FavChar = {
+  id: number;
+  name: string;
+  status: string;
+  gender: string;
+  image: string;
+}
+
 export type Info = {
   count: number;
   pages: number;

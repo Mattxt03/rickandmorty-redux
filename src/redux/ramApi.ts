@@ -1,7 +1,7 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { ApiResponse, CharacterModel } from "../components/models/Character"
-import { EpisodeApiRes } from "../components/models/Episode";
-import { LocationApiRes } from "../components/models/Location";
+import { ApiResponse, CharacterModel } from "../models/Character"
+import { EpisodeApiRes } from "../models/Episode";
+import { LocationApiRes } from "../models/Location";
 
 export const rickAndMortyApi = createApi({
     baseQuery: fetchBaseQuery({
